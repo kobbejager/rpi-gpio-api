@@ -36,7 +36,6 @@ def api_relay_set(relay, state):
     else:
         return "", status.HTTP_400_BAD_REQUEST
 
-    GPIO.output(relays[relay], set)
     return {"state": get(relay)}
 
 def get(relay):
