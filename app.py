@@ -10,8 +10,7 @@ relays = {"badkamer": 8, "slaapkamer": 10}
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BOARD)
 
-GPIO.setup(relays["badkamer"], GPIO.OUT, GPIO.HIGH)
-GPIO.setup(relays["slaapkamer"], GPIO.OUT, GPIO.HIGH)
+GPIO.setup(list(relays.values()), GPIO.OUT, initial=GPIO.HIGH)
 
 app = FlaskAPI(__name__)
 
