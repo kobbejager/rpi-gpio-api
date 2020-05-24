@@ -42,7 +42,7 @@ relays = {"badkamer": 8, "slaapkamer": 10}
 
 Note that physical pin numbers are used, not the BCM numbering. If you want to change this, replace `GPIO.setmode(GPIO.BOARD)` by `GPIO.setmode(GPIO.BCM)`
 
-### Installating, starting and enabling the Systemd unit
+### Installing, starting and enabling the Systemd unit
 
 ```
 sudo cp rpi-gpio-api/rpi-gpio-api.service /etc/systemd/system
