@@ -1,0 +1,12 @@
+[Unit]
+Description=rpi-gpio-api Service
+After=network.target
+
+[Service]
+User=www-data
+Group=www-data
+WorkingDirectory=/opt/rpi-gpio-api/
+ExecStart=/usr/local/bin/uwsgi --socket 0.0.0.0:5000 --protocol http -w app:app
+
+[Install]
+WantedBy=multi-user.target
